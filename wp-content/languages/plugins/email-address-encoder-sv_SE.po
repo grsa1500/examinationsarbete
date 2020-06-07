@@ -1,0 +1,32 @@
+# Translation of Plugins - Email Address Encoder - Stable (latest release) in Swedish
+# This file is distributed under the same license as the Plugins - Email Address Encoder - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-09-30 12:29:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: sv_SE\n"
+"Project-Id-Version: Plugins - Email Address Encoder - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "http://till.kruss.me/"
+msgstr "http://till.kruss.me/"
+
+#. Author of the plugin/theme
+msgid "Till Krüss"
+msgstr "Till Krüss"
+
+#. Description of the plugin/theme
+msgid "A lightweight plugin to protect email addresses from email-harvesting robots by encoding them into decimal and hexadecimal entities."
+msgstr "Ett lättviktigt tillägg som skyddar e-postadresser från e-postsniffande robotar genom att konvertera adresserna till decimaler och hexadecimala tecken."
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/email-address-encoder/"
+msgstr "http://wordpress.org/plugins/email-address-encoder/"
+
+#. Plugin Name of the plugin/theme
+msgid "Email Address Encoder"
+msgstr "Email Address Encoder"

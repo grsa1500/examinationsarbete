@@ -1,0 +1,24 @@
+@import "common/variables";
+
+// Glide
+// @import "~@glidejs/glide/dist/css/glide.core.min.css";
+// @import "~@glidejs/glide/dist/css/glide.theme.min.css";
+
+@import "common/global";
+
+@import "gutenberg/styles";
+
+@import "components/alerts";
+@import "components/buttons";
+@import "components/forms";
+@import "components/logotype";
+
+@import "layouts/header";
+@import "layouts/pages";
+@import "layouts/sidebar";
+@import "layouts/footer";
+
+
+@import "responsive/_pages_res";
+
+@import "lightbox";

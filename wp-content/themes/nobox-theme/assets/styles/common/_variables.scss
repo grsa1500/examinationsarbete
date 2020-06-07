@@ -1,0 +1,71 @@
+
+// Typsnitt
+// *******************************************
+$fontBody: system-ui;
+$fontHeading: 'Roboto Condensed', system-ui;
+$fontCode: "Menlo", "Consolas", "Roboto Mono", "Ubuntu Monospace", "Noto Mono", "Oxygen Mono", "Liberation Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$fontFAR: "Font Awesome 5 Regular";
+$fontFAB: "Font Awesome 5 Brands";
+$fontFAS: "Font Awesome 5 Solid";
+$fontFAL: "Font Awesome 5 Light";
+$fontSizeBody: 16px;
+$fontLineHeightBody: 1.5;
+$fontLineHeightHeading: 1.15;
+$fontWeightHeading: 700;
+
+// Storlek
+// *******************************************
+$containerWidth: 1170px;
+$headerHeight: 142px;
+$headingBaseMarginTop: 2.25rem;
+$headingBaseMarginRight: 0;
+$headingBaseMarginBottom: 1.25rem;
+$headingBaseMarginLeft: $headingBaseMarginRight;
+
+// Färger
+// ********************************************
+$colorPrimary: #F1C901;
+$colorSecondary: #9CB94A;
+$colorTertiary: #486165;
+
+
+$colorTextBody: #434343;
+$colorTextHeading: $colorTextBody;
+$colorLinks: rgb(114, 141, 40);
+
+$colorSuccess: #3c763d;
+$colorWarning: #ffdd57;
+$colorDanger: #a94442;
+$colorInfo: #31708f;
+
+// Animationer
+// ********************************************
+@keyframes slide-right {
+    0%   { opacity: 0; transform: translate3d(-2rem, 0, 0); }
+    100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes slide-left {
+    0%   { opacity: 0; transform: translate3d(2rem, 0, 0); }
+    100% { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes header-appear {
+    0%   { transform: translate3d(0, -$headerHeight, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+// Funktioner
+@function set-button-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000; // Lighter backgorund, return dark color
+    } @else {
+        @return #fff; // Darker background, return light color
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}

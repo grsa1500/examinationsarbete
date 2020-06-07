@@ -1,0 +1,424 @@
+@media only screen and (max-width: 1440px) {
+}
+@media only screen and (max-width: 1280px) {
+}
+@media only screen and (max-width: 1140px) {
+}
+//Liggande ipad
+@media only screen and (max-width: 1024px) {
+    .tradgardstipsbox {
+        display: block;
+
+        .imgcontainer {
+            width: 100%;
+        }
+
+        .textcontainer {
+            width: 100%;
+            p {
+                max-width: 500px;
+            }
+        }
+    }
+
+    .introduction {
+        display: block;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        width: 95%;
+        h2 {
+            color: $colorPrimary;
+            margin-top: 0;
+        }
+
+        .textbox {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            max-width: 650px;
+            margin: auto;
+        }
+    }
+
+    .footerflex {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 90%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        .logo,
+        .opening,
+        .footercontact {
+            width: 100%;
+            padding: 15px;
+        }
+
+
+        .footercontact {
+            max-width: initial;
+        }
+    }
+}
+//Liggande nexus platta
+@media only screen and (max-width: 900px) {
+    .pagecontainer {
+        display: block;
+
+        .post-thumbnail {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .pagecontent {
+            width: 100%;
+        }
+    }
+
+    .kontakt {
+        .pagecontainer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            .post-thumbnail {
+                width: 80%;
+            }
+        }
+    }
+
+    .sortimentcontainer {
+       
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .sortimentcontainer {
+       
+            .sortimentbox {
+                width: 49%;
+            }
+        }
+    
+    }
+
+    .footerflex {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .lightboxcontainer {
+      
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+        
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+    
+    .lightboxcontainer {
+  
+        
+        a {
+            height: 200px;
+            width: 50%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+ 
+        }
+       
+     }
+
+}
+//Stående Ipad
+@media only screen and (max-width: 800px) {
+    .form {
+        .inner {
+            display: block;
+        }
+
+        .formcontainer,
+        .map {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    .pageheadingcontainer {
+        margin-top: 0;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+    h2 {
+        font-size: 30px;
+    }
+
+    .introduction {
+        margin-bottom: 80px;
+    }
+    .news {
+        display: block;
+    }
+
+    .headingcontainer {
+        display: block;
+        position: relative;
+    }
+
+    .headingborder {
+        height: 100px;
+        width: 30px;
+        background: green;
+    }
+
+    .newsbox {
+        display: block;
+
+        .border {
+            display: none;
+        }
+
+        &:nth-child(even) {
+            -webkit-box-pack: initial;
+            -ms-flex-pack: initial;
+            justify-content: initial;
+            -webkit-box-align: initial;
+            -ms-flex-align: initial;
+            align-items: initial;
+
+            .border {
+                background: $colorPrimary;
+            }
+        }
+
+        &:nth-child(odd) {
+            .border {
+                background: $colorSecondary;
+            }
+        }
+
+        .content {
+            display: block;
+            margin-bottom: 108px;
+            max-width: 1500px;
+
+            .imgbox {
+                height: 350px;
+                width: 100%;
+                max-width: 1072px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                }
+            }
+
+            .textbox {
+                width: 95%;
+                max-width: 650px;
+                margin: auto;
+                margin-top: 0;
+                min-width: 0;
+
+                button {
+                    display: block;
+                    margin: auto;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            -ms-flex-line-pack: end;
+            align-content: flex-end;
+            h2 {
+                color: $colorPrimary;
+                padding-right: 10px;
+                margin-right: 10px;
+
+                span {
+                    display: inline;
+
+                    padding: 0 10px 0 0;
+                    -webkit-box-decoration-break: clone;
+                    box-decoration-break: clone;
+                }
+            }
+
+            .textbox {
+                margin-right: 0;
+                margin-left: 0;
+                margin: auto;
+            }
+
+            .content {
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+            }
+        }
+
+        &:nth-child(odd) {
+            .imgbox {
+                -webkit-box-ordinal-group: 0;
+                -ms-flex-order: -1;
+                order: -1;
+            }
+
+            .textbox {
+                margin-left: 0;
+                margin-right: 0;
+                margin: auto;
+
+                p {
+                    padding-left: 10px;
+                }
+            }
+            h2 {
+                color: $colorSecondary;
+                span {
+                    display: inline;
+
+                    padding: 0 0 0 10px;
+                    -webkit-box-decoration-break: clone;
+                    box-decoration-break: clone;
+                }
+            }
+        }
+    }
+
+    .banner {
+        height: 450px;
+
+        h1 {
+            padding: 50px;
+            border: 5px solid white;
+            font-size: 35px;
+        }
+    }
+
+    .contact {
+        display: block;
+        margin: auto;
+        max-width: 650px;
+        .right {
+            margin: auto;
+            margin-top: 70px;
+        }
+        .left {
+            margin: auto;
+            width: 100%;
+            max-width: 500px;
+        
+        }
+    }
+}
+//Liggande iphone 6 plus
+@media only screen and (max-width: 736px) {
+    .backlink {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+}
+//Liggande iphone 6
+@media only screen and (max-width: 667px) {
+#sbi_images {
+    div {
+        display: none!important;
+
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+            display: block!important;
+        }
+    }
+
+
+    
+}
+
+.sbi_load_btn {
+    display: none!important;
+}
+
+    .kontakt {
+        .pagecontainer {
+            display: block;
+
+            .post-thumbnail {
+                width: 100%;
+            }
+        }
+    }
+}
+//Liggande iphone 5/5s
+@media only screen and (max-width: 568px) {
+    .lightboxcontainer {
+     
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    .sortimentcontainer {
+        -ms-grid-columns: 1fr;
+
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .sortimentcontainer {
+       display: block;
+            .sortimentbox {
+                width: 100%;
+            }
+        }
+    
+    }
+}
+//liggande iphone 4/4s
+@media only screen and (max-width: 450px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    .banner {
+        height: 450px;
+
+        h1 {
+            padding: 50px;
+            border: 5px solid white;
+            font-size: 7vw;
+        }
+    }
+}
+//Stående iphone 6 plus
+@media only screen and (max-width: 414px) {
+}
+//Stående Samsung/sony
+@media only screen and (max-width: 360px) {
+}
+//Stående iphone 4/5/5s
+@media only screen and (max-width: 320px) {
+    .logotype {
+        max-width: 150px;
+    }
+
+    .footerflex .openinghours {
+        width: 200px;
+    }
+}

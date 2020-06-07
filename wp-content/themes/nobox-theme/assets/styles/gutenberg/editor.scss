@@ -1,0 +1,80 @@
+@import "../common/variables";
+
+$base-font-size: 10px;
+$body-font-size: $fontSizeBody;
+$heading-margin-top: $base-font-size * strip-unit($headingBaseMarginTop);
+$heading-margin-bottom: $base-font-size * strip-unit($headingBaseMarginBottom);
+$heading-margin-left: $base-font-size * strip-unit($headingBaseMarginLeft);
+$heading-margin-right: $base-font-size * strip-unit($headingBaseMarginRight);
+
+body {
+    font-family: $fontBody;
+    font-size: $fontSizeBody;
+    line-height: $fontLineHeightBody;
+    color: $colorTextBody;
+}
+
+.editor-post-title__input, h2, h3, h4, h5, h6 {
+    font-family: $fontHeading;
+    font-weight: $fontWeightHeading;
+    margin:
+        $heading-margin-top
+        $heading-margin-right
+        $heading-margin-bottom
+        $heading-margin-left;
+    line-height: $fontLineHeightHeading;
+    color: $colorTextHeading;
+}
+
+.editor-post-title__input {
+    font-size: 2.488 * $body-font-size;
+}
+h2 {
+    font-size: 2.074 * $body-font-size;
+}
+h3 {
+    font-size: 1.728 * $body-font-size;
+}
+h4 {
+    font-size: 1.44 * $body-font-size;
+}
+h5 {
+    font-size: 1.2 * $body-font-size;
+}
+h6 {
+    font-size: 1 * $body-font-size;
+}
+
+.wp-block:not([data-align="full"]):not([data-align="wide"]) {
+    max-width: 1140px;
+}
+
+/*.editor-styles-wrapper {
+    color: $colorTextBody !important;
+}
+
+.editor-writing-flow {
+    font-size: 62.5% !important;
+}
+
+.editor-writing-flow .wp-block .wp-block-freeform,
+.editor-rich-text p,
+.editor-post-title__input,
+.wp-block-quote__citation {
+    font-family: $fontBody;
+    line-height: $fontLineHeightBody !important;
+    font-size: 1.8em !important;
+}
+
+.editor-writing-flow .wp-block textarea {
+    font-family: $fontHeading;
+}
+
+.wp-block {
+    max-width: $containerWidth;
+}
+
+// Titel
+.editor-post-title__block .editor-post-title__input {
+    font-size: 2.488em !important;
+}*/

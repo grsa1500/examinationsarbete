@@ -1,0 +1,10 @@
+{
+    "require-dev": {
+        "symfony/var-dumper": "^4.3",
+        "itinerisltd/itineris-wp-coding-standards": "^0.3.0"
+    },
+    "scripts": {
+        "style:check": "phpcs",
+        "style:fix": "phpcbf"
+    }
+}

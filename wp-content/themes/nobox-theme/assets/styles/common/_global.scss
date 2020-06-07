@@ -1,0 +1,266 @@
+// Allmänt
+// *****************************************************
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.clear {
+    clear: both;
+    *zoom: 1;
+
+    &:before {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        content: '';
+        display: table;
+    }
+}
+
+html {
+    font-family: $fontBody;
+    font-size: 62.5%;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    cursor: auto;
+}
+
+body {
+    font-size: $fontSizeBody;
+    line-height: $fontLineHeightBody;
+    color: $colorTextBody;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+    &.admin-bar {
+        min-height: calc(100vh - 32px);
+
+        @media screen and (max-width: 782px) {
+            min-height: calc(100vh - 46px);
+        }
+    }
+
+    &.stop-scrolling {
+        overflow: hidden;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: $containerWidth;
+    flex-grow: 1;
+    width: 100%;
+
+
+    &.container--fluid {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    // @media screen and (max-width: 1280px) {
+    //     max-width: 960px;
+    // }
+}
+
+// TODO: main ska flyttas till en egen fil
+main {
+    // flex-grow: 1;
+    // display: flex;
+    // flex-flow: row wrap;
+
+    // @media (min-width: 1140 px) {
+    //     flex-wrap: nowrap;
+    // }
+
+    // // TODO: Ta bort det här sen
+    // section {
+    //     flex: 0 1 100%;
+    // }
+
+    // aside {
+    //     flex: 1 0 30%;
+    // }
+}
+
+// Typografi & Bildhantering
+//*****************************************************
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: $fontWeightHeading;
+    margin:
+        $headingBaseMarginTop
+        $headingBaseMarginRight
+        $headingBaseMarginBottom
+        $headingBaseMarginLeft;
+    line-height: $fontLineHeightHeading;
+    color: $colorTextHeading;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1em;
+}
+
+em {
+    font-style: italic;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 0 0 1rem 2rem;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+a {
+    color: $colorLinks;
+    transition: all .2s;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    li {
+        list-style: disc;
+        padding: 0.3rem 0;
+    }
+}
+
+ol {
+    li {
+        list-style: decimal;
+        padding: 0;
+    }
+}
+
+p {
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+img {
+    opacity: 1;
+    transition: opacity .2s;
+    max-width: 100%;
+    height: auto;
+
+    &[data-src] {
+        opacity: 0;
+    }
+
+    &.alignleft {
+        float: left;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    &.alignright {
+        float: right;
+        margin: 1rem 0 1rem 1rem;
+    }
+
+    &.aligncenter {
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+pre, code, kbd {
+    font-family: $fontCode;
+}
+
+kbd {
+    background-color: #111;
+    color: #eee;
+    padding: 0.2em 0.3em;
+    border-radius: 0.3em;
+    font-size: 1.6rem;
+}
+
+// Meta info
+//*****************************************************
+.meta-info {
+    width: 100%;
+    margin: 0 0 0.5rem;
+
+    time.updated {}
+    p.author {}
+}
+
+// Brödsmulor
+// ***************************************
+// TODO: What two h*ck
+#breadcrumbs {
+    width: 100%;
+    padding: 2rem 0 1rem;
+    margin: 0 0 2rem;
+    font-size: small;
+    border-bottom: solid 1px #E0E0E0;
+    font-weight: 600;
+    color: $colorLinks;
+    
+    span {
+        color: #000;
+
+        span { a {font-weight: normal;
+            opacity: .8;} }
+        span { span {font-weight: bold;
+            opacity: 1;} }
+    }
+}
+
+// Tillgänglighet
+// ***************************************
+
+// För skärmläsare
+// Används för att ge text till ikoner etc.
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    word-wrap: normal !important;
+}
+
+// Stäng av samtliga animationer ifall användaren föredrar det
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}

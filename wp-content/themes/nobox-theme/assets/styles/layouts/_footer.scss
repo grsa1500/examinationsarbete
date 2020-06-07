@@ -1,0 +1,78 @@
+
+// Sidfot
+//----------------------------------------------------
+.site-footer {
+    font-size: 1.4rem;
+    width: 100%;
+    height: auto;
+padding-bottom: 30px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin-top: auto;
+    background: white;
+
+    z-index: 100;
+    border-top: 20px solid $colorTertiary;
+
+    > .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100%;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        z-index: 100;
+    }
+
+    &__copyright {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 100%;
+    }
+}
+
+
+.footerflex {
+    max-width: 1170px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 14px;
+    padding-top: 40px;
+    background: white;
+    padding-bottom: 40px;
+    width: 90%;
+ 
+
+   svg{
+       color: black;
+margin-top: 10px;
+       width: 30px!important;
+       height: 30px!important;
+   }
+
+  
+    div {
+        max-width: 270px;
+    }
+
+    h4 {
+        color: black;
+    }
+    
+.openinghours {
+    width: 260px;
+
+
+}
+}

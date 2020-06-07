@@ -1,0 +1,355 @@
+//Variable
+$admin-color: #ff6600;
+
+@keyframes slide-up {
+    0%   { opacity:0; transform: translate3d(0, -10px, 0); }     
+    100% { opacity:1; transform: translate3d(0, 0, 0); }
+}
+@keyframes slide-right {
+    0%   { opacity:0; transform: translate3d(-40px, 0, 0); }     
+    100% { opacity:1; transform: translate3d(0, 0, 0); }
+}
+
+//Inloggning
+.login {
+    background: rgba(255,255,255,1);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 248, 240, 1) 100%);
+
+    #login {
+        max-width: 650px; 
+        
+        h1 { 
+            a {
+                background-image: url('../../images/logotype.png');
+                background-size: auto;
+                width: auto;
+                outline: 0;
+                margin:0;
+                box-shadow: none;
+                pointer-events:none;
+            } 
+        }
+
+        //Meddelande
+        #login_error {
+            animation-name: slide-right;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+
+        p.message {
+            animation-name: slide-right;
+            animation-duration: .5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease;
+        }
+        
+        //Form
+        #loginform {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+            padding: 26px 24px;
+
+            p {
+                //username
+                label[for="user_login"] {
+                    width: 48%;
+
+                    input {
+                        padding: 10px 15px;
+                        margin: 0;
+
+                        &:-webkit-autofill {
+                            box-shadow: 0 0 0px 1000px #fff inset;
+                        }
+                    }
+                }
+
+                //password
+                label[for="user_pass"] {
+                    width: 48%;
+
+                    input {
+                        padding: 10px 15px;
+                        margin: 0;
+
+                        &:-webkit-autofill {
+                            box-shadow: 0 0 0px 1000px #fff inset;
+                        }
+                    }
+                }
+
+                //Google Authenticator
+                label[for="authenticator"] {
+                    width: 100%;
+                    margin: 10px 0 0;
+
+                    small {
+                        display: none;
+                    }
+
+                    input {
+                        padding: 10px 15px;
+                        margin: 0;
+
+                        &:-webkit-autofill {
+                            box-shadow: 0 0 0px 1000px #fff inset;
+                        }
+                    }
+                }
+
+                //forgetmenot
+                &.forgetmenot {
+                    width: 48%;
+                    margin:15px 0 0;
+
+                    label[for="rememberme"] {
+                        width: 100%;
+
+                        input {
+                            margin:0 10px 0 0;
+
+                            &:-webkit-autofill {
+                                box-shadow: 0 0 0px 1000px #fff inset;
+                            }
+
+                            &:before {
+                                color: #507e02;
+                                margin: -12px 0 0 -7px;
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+
+                //Login button
+                &.submit {
+                    width: 25%;
+                    margin: 15px 0 0;
+
+                    input {
+                        padding: 10px 15px;
+                        height: auto;
+                        line-height: 21px;
+                        width: 100%;
+                        background: #507e02;
+                        text-shadow: none;
+                        box-shadow: none;
+                        border: 0;
+                        border-radius: 0;
+                        transition: background .3s;
+
+                        &:hover {
+                            background:darken(#507E02, 5%);
+                        }
+                    }
+                }
+            }
+        }
+
+        #lostpasswordform {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+
+            p {
+                //username
+                label[for="user_login"] {
+                    width: 75%;
+
+                    input {
+                        padding: 10px 15px;
+                        margin: 0;
+                    }
+                }
+
+                //Login button
+                &.submit {
+                    width: 25%;
+                    margin:24px 0 0;
+
+                    input {
+                        padding: 10px 15px;
+                        height: auto;
+                        line-height: 21px;
+                        width: 100%;
+                        background: #507e02;
+                        text-shadow: none;
+                        box-shadow: none;
+                        border:0;
+                        border-radius: 0;
+                        transition: background .3s;
+
+                        &:hover {
+                            background:darken(#507e02, 5%);
+                        }
+                    }
+                }
+            }
+        }
+        
+        //Glömt lösenord
+        p { 
+            &#nav {
+                width: 50%;
+                margin: 15px 0 0;
+                text-align: center;
+            }
+
+            &#backtoblog {
+                width: 48%;
+                margin: 15px 0 0;
+                text-align: center;
+            }
+        }
+    }
+}
+
+//Admin style
+//Admin Bar (Toppen)
+#wpadminbar {
+    .quicklinks {
+        ul.ab-top-menu {
+            li {
+                border-right: solid 1px #555;
+
+                a {
+                    transition: color .2s; color: #dadada !important;
+                    padding: 0 12px;
+
+                    &:hover, &:focus {
+                        color: $admin-color !important;
+                    }
+
+                    &:before {
+                        color: #fff !important;
+                    }
+
+                    .ab-icon {
+                        color: #fff;
+
+                        &:before {
+                            color: #fff !important;
+                        }
+                    }
+
+                    .ab-label {
+                        color: #fff;
+                    }
+                }
+                
+                .ab-sub-wrapper {
+                    padding: 5px 10px !important;
+
+                    ul {
+                        padding: 0;
+
+                        li {
+                            border-bottom: solid 1px #555;
+                            border-right: none;
+
+                            .ab-item {
+                                padding: 5px 0;
+                                position: relative;
+                                height: 19px !important;
+                                line-height: 19px !important;
+
+                                &:after {
+                                    content: '\f101';
+                                    font-family: FontAwesome;
+                                    float: right;
+                                    margin-right: 3px;
+                                    font-size: 12px;
+                                    transition: margin .2s;
+                                }
+
+                                &:before {
+                                    display: none;
+                                }
+
+                                &:hover {
+                                    color: #fff;
+
+                                    &:after {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+
+                &#wp-admin-bar-wp-logo, &#wp-admin-bar-comments {
+                    display: none;
+                }
+
+                &:hover {
+                    a {
+                        .ab-label {
+                            color: $admin-color !important;
+                        }
+                    }
+                }
+
+                &#wp-admin-bar-customize {display: none;}
+            }
+        }
+
+        ul.ab-top-secondary {
+            li {
+                border-left: solid 1px #555;
+
+                .ab-sub-wrapper { width: 350px; right: -380px; margin: 0 -2px 0 0; display: block !important; opacity: 0; transition: all .3s;
+                    ul#wp-admin-bar-user-actions {
+                        li { border-left: none; margin-left:110px; margin-right: 0px;
+                            a { position: relative; padding: 5px 0 5px 20px;
+                                span { float: left; width: 100%; line-height: 19px; display: inline-block;
+                                    &.display-name {text-transform: capitalize;}
+                                    &.username {float: right; font-style: italic;}
+                                }
+                                .avatar {left:-80px;height: 64px; width: 64px;}
+                                
+                                &:after { position: absolute; left: 0; font-family: FontAwesome; margin:1px 8px 0 0; float: left; color: #fff;}
+                            }
+                            
+
+                            &#wp-admin-bar-user-info {margin-bottom: 0;
+                                a { position: relative;
+                                    &:after {content: '\f007'; font-family: FontAwesome;}
+                                }
+                            }
+                            &#wp-admin-bar-edit-profile {
+                                a { position: relative;
+                                    &:after {content: '\f085'; font-family: FontAwesome;}
+                                }
+                            }
+                            &#wp-admin-bar-logout {
+                                a { position: relative;
+                                    &:after {content: '\f08b'; font-family: FontAwesome;}
+                                }
+                            }
+                        }
+                    }
+                }
+                &#wp-admin-bar-my-account {
+                    a {padding: 0 15px;}
+                }
+                &#wp-admin-bar-search {display: none;}
+                &.hover {
+                    .ab-sub-wrapper {opacity: 1; right: 0;}
+                }
+                
+            }
+        }
+    }
+}
+
+// Stäng av samtliga animationer ifall användaren föredrar det
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}

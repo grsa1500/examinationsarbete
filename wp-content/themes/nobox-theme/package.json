@@ -1,0 +1,70 @@
+{
+  "private": true,
+  "name": "nobox-theme-sage",
+  "author": "nobox.",
+  "version": "1.1.0",
+  "description": "Standard tema.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
+    "lint": "eslint --color assets/scripts/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/pro-light-svg-icons": "^5.11.2",
+    "@fortawesome/pro-regular-svg-icons": "^5.8.2",
+    "@fortawesome/pro-solid-svg-icons": "^5.8.2",
+    "@glidejs/glide": "^3.4.1",
+    "core-js": "^3",
+    "custom-event-polyfill": "^1.0.7",
+    "intersection-observer": "^0.7.0",
+    "jquery-validation": "^1.19.0",
+    "js-dom-router": "^1.0.0",
+    "lodash.debounce": "^4.0.8",
+    "promise-polyfill": "^8.1.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "setimmediate": "^1.0.5",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.5.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jquery": "^1.5.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.8",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "laravel-mix": "^4.1.0",
+    "laravel-mix-eslint-config": "^0.1.7",
+    "laravel-mix-imagemin": "^1.0.2",
+    "postcss-preset-env": "^6.7.0",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.20.1",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "license": "ISC",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

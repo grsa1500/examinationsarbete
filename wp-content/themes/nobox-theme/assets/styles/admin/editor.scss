@@ -1,0 +1,11 @@
+/*-----------------------------------------------*\
+    Style för shortcodes i wysiwyg
+\*-----------------------------------------------*/
+.ingress_text_sc { font-size: 17px; color: #555; margin: 15px 0; 
+	&.alignleft {text-align: left;}
+	&.aligncenter {text-align: center;}
+	&.alignright {text-align: right;}
+}
+.ingress_text_sc { float: left; width: 100%; 
+	a {padding: 10px 0; text-align: center; float: left; width: 100%;}
+}
